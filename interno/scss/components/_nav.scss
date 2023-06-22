@@ -1,0 +1,14 @@
+.nav {
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+   }
+
+   &__link {
+      display: block;
+      text-decoration: none;
+   }
+}

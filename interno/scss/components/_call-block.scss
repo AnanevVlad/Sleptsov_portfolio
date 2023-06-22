@@ -1,0 +1,45 @@
+.call-block {
+   position: relative;
+   padding-left: 110px;
+   margin-bottom: 70px;
+   display: block;
+   cursor: pointer;
+
+   @media (max-width: 991px) {
+      margin-bottom: 20px;
+   }
+
+   &__number {
+      display: inline-block;
+      margin-bottom: 0;
+      font: 24px/1.5 $font-main;
+      text-decoration: none;
+      color: $gray;
+
+      &:hover {
+         color: blue;
+      }
+   }
+
+   p {
+      margin-bottom: 0;
+   }
+
+   &:before {
+      content: "";
+      width: 93px;
+      height: 93px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: url(../image/icons/phone.svg) center no-repeat;
+      border-radius: 50%;
+      background-color: #F4F0EC;
+
+      @media (max-width: 991px) {
+         transform: translate(-130% ,-50%);
+         left: 50%;
+      }
+   }
+}

@@ -1,0 +1,36 @@
+.form {
+   padding: 20px 10px;
+
+   &__input {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-align: center;
+      padding: 5px 10px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      margin:0 auto 30px;
+      background-color: $dark;
+      color: #fff;
+      transition: .1s;
+      outline: none;
+      width: 35%;
+
+      @media (max-width: 991px) {
+         width: 40%;
+      }
+
+      @media (max-width: 767px) {
+         width: 55%;
+         font-size: 16px;
+      }
+
+      &::placeholder {
+         font-size: 18px;
+      }
+
+      &:focus {
+         border-bottom: 3px solid #fff;
+      }
+   }
+}

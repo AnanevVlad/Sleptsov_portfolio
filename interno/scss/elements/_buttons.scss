@@ -1,0 +1,87 @@
+.btn {
+   display: inline-block;
+   position: relative;
+   background-color: $dark;
+   border-radius: 18px;
+   padding: 22px 67px 22px 34px;
+   font: 18px/ 1.5 $font-main;
+   color: white;
+   text-decoration: none;
+   transition: .4s;
+   border: 2px solid $dark;
+   
+   &:before {
+      position: absolute;
+      content: "";
+      width: 34px;
+      height: 36px;
+      background: url(../image/icons/right.svg) right no-repeat;
+      background-size: cover;
+      top: 50%;
+      right: 1vw;
+      transform: translateY(-50%);
+      
+      @media (max-width:991px) {
+         width: 24px;
+         height: 26px;
+      }
+   }
+
+   &:hover {
+      background-color: $light_gray;
+      box-shadow: 0 0 15px 0 $gold;
+      color: black;
+      border-color: $gold;
+   }
+
+   @media (max-width:991px) {
+      border-radius: 10px;
+      padding: 10px 50px 10px 20px;
+      font-size: 14px;
+      color: white;
+      text-decoration: none;
+      transition-duration: .4s;
+   }
+}
+
+.circle-button {
+   transition: all 0.55s cubic-bezier(0.51, 0.04, 0.63, 1.4); 
+   cursor: pointer;
+   border-radius: 50%;
+
+   .arrow-button {
+      display: block;
+      position: relative;
+      width: 70px;
+      height: 70px;
+      background-color: $light_gray;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      transition: all 0.55s cubic-bezier(0.68,-0.12, 0.78, 1.6); 
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 20px;
+         height: 20px;
+         transform: translate(-50%, -50%);
+         background: url(../image/icons/next.svg) center no-repeat;
+     }
+   }
+
+   &:hover {
+      transform: rotate(-90deg) scale(.8);
+      box-shadow: 0 0 15px 0 $gold;
+      border-radius: 10px;
+      
+         
+      .arrow-button {
+         transform: rotate(90deg) scale(.95);
+         background-color: $light_gray;
+         border-radius: 10%;
+         border: 2px solid $gold;
+
+      }
+   }
+}
